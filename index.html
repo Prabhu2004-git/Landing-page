@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Product Landing Page</title>
+    <style>
+        /* Define global variables for a modern, easy-to-change theme */
+        :root {
+            --primary-color: #38a169; /* Green/Teal */
+            --secondary-color: #2c5282; /* Deep Blue */
+            --text-light: #f7f7f7;
+            --text-dark: #2d3748;
+            --bg-light: #ffffff;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* 1. Base Reset and Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 2. Header and Navigation */
+        .main-header {
+            background-color: var(--secondary-color);
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* 3. Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #4a5568 100%);
+            color: var(--text-light);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #2f855a; /* Slightly darker green */
+            transform: translateY(-2px);
+        }
+
+        /* 4. Features Section */
+        .features {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+        }
+
+        .feature-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .feature-item {
+            flex: 1;
+            padding: 30px;
+            background-color: #f7fafc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        /* 5. Footer */
+        .main-footer {
+            background-color: var(--text-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-light);
+        }
+
+        /* 6. Responsiveness (Media Queries) */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .nav-links {
+                display: none; /* Simple mobile nav hiding - replace with a hamburger menu for production */
+            }
+
+            nav {
+                justify-content: center; /* Center logo when nav is hidden */
+            }
+
+            .feature-grid {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .feature-item {
+                padding: 20px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+            }
+
+            .footer-links li {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">MyProduct.io</a>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="container">
+            <h1>The Future of Digital Productivity is Here.</h1>
+            <p>Our powerful new platform revolutionizes the way you work, bringing all your essential tools into one seamless, intuitive experience.</p>
+            <a href="#" class="cta-button">Start Your Free Trial Today</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Product?</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Lightning Fast</h3>
+                    <p>Experience zero lag with our optimized, cloud-based infrastructure designed for peak performance.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Seamless Integration</h3>
+                    <p>Connect effortlessly with all your favorite third-party apps and services with a single click.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is available around the clock to ensure you never miss a beat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer" id="contact">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="mailto:contact@myproduct.io">Contact Us</a></li>
+            </ul>
+            <p>&copy; 2025 MyProduct.io. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
